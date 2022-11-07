@@ -1,0 +1,70 @@
+Tutotial node com SQLSERVER
+https://www.luiztools.com.br/post/tutorial-node-js-com-ms-sql-server/
+https://www.youtube.com/watch?v=Fbu7z5dXcRs
+
+roda o arquivo node
+npx ts-node src/main.ts
+
+roda um servidor local disponibilizado pelo express
+curl http://localhost:300
+
+>>>> Aula
+https://app.branas.io/users/3e20fa2d-6ba0-41b4-a141-3ddd9786b4af/products/369206b9-2a0d-4322-b1f6-3e9d22336740/contents/066404e9-668c-4991-884d-49888ef85587
+
+/*inicializa um projeto em node >> -y indica para dar sim para todos
+vai gerar o arquivo package.json
+*/
+npm init -y
+
+
+/*Saber a versão do node*/
+node -version
+
+/*instala pacote e dependência >> npm install, no exemplo abaixo
+estamos instalando o typescript, jest ...*/
+npm install tyoescript 
+npm install jest 
+npm install  @types/jest 
+npm install ts-node 
+npm install ts-jest
+
+
+/*npx uma forma de executar algum binário de alguma depedência de node.js*/
+npx tsc --init
+
+/*Executa o arquivo type script, lembrando que o pacote ts-node tem que estar instalado*/
+npx ts-node main.ts
+
+/*inicializa um arquivo de configuração para o jest indicando que vai utiilizar node*/
+npx ts-jest config:init
+
+/* para que seja gerado um coverage do teste
+adicione no package.json
+
+"coverage":"tsc && jest ./dist/test --coverage"
+depois rode 
+
+npx jest --runInBand
+Executa os testes em ordem (se trabalhar com async os testes é rodado em paralelo e pode dar erro se houver 
+dependencia de base)	
+
+///Dicas tratamento de erro com jest
+https://dev.to/dotmendes/testando-lancamento-de-excecoes-com-jest-4p8c
+
+npm run coverage
+*/
+
+
+
+///////////////////////////
+Rabbitmq
+///////////////////////////
+Instalando pacotes que conversam com Rabbitmq
+
+npm install amqplib @types/amqplib
+
+
+
+
+
+
